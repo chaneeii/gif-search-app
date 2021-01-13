@@ -19,8 +19,8 @@ function Results(props){
 const renderSearchResults = (searchResults) => {
 
     //일반 자바스크립트 객체로 변환
-    return searchResults.map(result => {
-        return <Result result={result} />
+    return searchResults.map((result , i )=> {
+        return <Result i={i} result={result} />
     });
 
 };

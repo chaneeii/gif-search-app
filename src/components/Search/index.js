@@ -2,13 +2,16 @@ import React from "react";
 import axios from "axios";
 import {connect} from'react-redux';
 import {getSearchResults} from "./action";
+import {HeadingStyle, InputStyle, SearchWrapper} from "./styled";
 
 function Search(props) {
     console.log(props);
     return(
-        <div>
-            <input onChange={ e => onInputChange(e,props)} />
-        </div>
+
+        <SearchWrapper>
+            <HeadingStyle>GIF</HeadingStyle>
+            <InputStyle onChange={ e => onInputChange(e,props)} />
+        </SearchWrapper>
     );
 }
 
