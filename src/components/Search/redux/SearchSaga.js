@@ -20,10 +20,10 @@ function* setSearch({value}) {
 
 function* watchSearch() {
     //yield : 1by1
-    // yield takeLatest(types.watchGetSearchResults, setSearch); //'WATCH_GET_SEARCH_RESULTS' 이벤트감지하면 takeLatest하구 setSearch실
+    yield takeLatest(types.watchGetSearchResults, setSearch); //'WATCH_GET_SEARCH_RESULTS' 이벤트감지하면 takeLatest하구 setSearch실
 
     //debounce
-    yield debounce(1000,types.watchGetSearchResults, setSearch);
+    // yield debounce(1000,types.watchGetSearchResults, setSearch);
 }
 
 export default watchSearch;
